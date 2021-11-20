@@ -8,10 +8,10 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'mvn test'
+                sh 'mvtest'
             }
             post {
-                alwaysss {
+                always {
                     junit 'target/surefire-reports/*.xml'
                 }
             }
