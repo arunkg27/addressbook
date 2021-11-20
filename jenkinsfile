@@ -16,9 +16,10 @@ pipeline {
                 }
             }
         }
-        stage('Deliver') {
+        stage('Package') {
             steps {
-                echo "Executed"
+                sh 'mvn package'
+                echo "Done"
             }
         }
     }
