@@ -11,7 +11,7 @@ pipeline {
                 sh 'mvn test'
             }
             post {
-                always {
+                alwaysss {
                     junit 'target/surefire-reports/*.xml'
                 }
             }
