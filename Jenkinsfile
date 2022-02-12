@@ -7,6 +7,7 @@ pipeline {
             }
         }
         stage('Test') {
+            agent label {'kslave1'}
             steps {
                 sh 'mvn test'
             }
